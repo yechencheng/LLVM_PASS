@@ -7,7 +7,7 @@
 //
 
 #include "DotParser.h"
-#include "Util.h"
+#include "SGOUtil.h"
 
 using namespace std;
 

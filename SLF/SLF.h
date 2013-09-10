@@ -35,9 +35,9 @@
 #include <llvm/Analysis/MemoryDependenceAnalysis.h>
 
 #include "IOValueParser.h"
-#include "Util.h"
+#include "SLFUtil.h"
 
-
+//SLF = StreamIt Loop Fusion
 class SLF : public FunctionPass {
 public:
     static char ID;

@@ -45,7 +45,4 @@ enum FUNC {
 
 inline bool IsCallFunc(llvm::Instruction* I, FUNC NAME);
 
-template<class T>
-bool ExistOrCreate(T* &p);
-
 #endif /* defined(__SLF__MayBeUseful__) */

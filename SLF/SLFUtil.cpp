@@ -6,23 +6,13 @@
 //  Copyright (c) 2013年 ycc. All rights reserved.
 //
 
-#include "Util.h"
+#include "SLFUtil.h"
 
 
 
 using namespace llvm;
 
-template<class T>
-bool ExistOrCreate(T* &p)
-{
-    if(p != NULL)
-        return true;
-    else
-    {
-        p = new T;
-        return false;
-    }
-}
+
 
 
 inline bool IsPopFunction(Function* F)

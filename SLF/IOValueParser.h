@@ -31,7 +31,7 @@
 #include <llvm/Analysis/AliasAnalysis.h>
 #include <llvm/Analysis/MemoryDependenceAnalysis.h>
 
-#include "Util.h"
+#include "SLFUtil.h"
 
 using namespace llvm;
 
