@@ -77,6 +77,8 @@ DotGraph::DotGraph(string DotFile)
     new(this) DotGraph(agread(fin, NULL));
 }
 
+/*
+ Example Code
 int main(int argc, const char * argv[])
 {
     DotGraph x("/Users/apple/Project/Temp/stream-graph.dot");
@@ -89,3 +91,4 @@ int main(int argc, const char * argv[])
     }
     return 0;
 }
+*/
