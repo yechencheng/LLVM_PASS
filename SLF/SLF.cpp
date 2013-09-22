@@ -1,6 +1,8 @@
 #include "SLF.h"
+#include <iostream>
 
 using namespace llvm;
+using namespace std;
 
 SLF::SLF() : FunctionPass(ID), AA(NULL), MDA(NULL), LI(NULL), InputValue(NULL), OutputValue(NULL) {}
 
@@ -21,11 +23,12 @@ void SLF::getAnalysisUsage(AnalysisUsage& AU) const
 
 bool SLF::runOnFunction(Function &F)
 {
-    /*
-    if(F.getName() != "_Z27work_CombineDFT__183_48__20i") return false;
+    
+    
+    //if(F.getName() != "_Z27work_CombineDFT__183_48__20i") return false;
     if(!IsWorkFunction(F.getName()))
         return false;
-    */
+    cerr << (F.getName()).str() << endl;
     this->F = &F;
     LI = &getAnalysis<LoopInfo>();
     AA = &getAnalysis<AliasAnalysis>();
@@ -40,7 +43,7 @@ bool SLF::runOnFunction(Function &F)
     x.OutputInfo();
     */
     
-    F.viewCFG();
+    //F.viewCFG();
     return false;   //Not change code
 }
 

@@ -16,6 +16,7 @@ public:
     SGO();
     
     virtual bool runOnModule(Module &M);
+    virtual void getAnalysisUsage(AnalysisUsage& AU) const;
     
 };
 #endif

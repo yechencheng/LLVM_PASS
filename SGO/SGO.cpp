@@ -11,12 +11,24 @@ using namespace std;
 SGO::SGO() : ModulePass(ID)
 {}
 
+void SGO::getAnalysisUsage(AnalysisUsage &AU) const
+{
+    AU.addRequired<SLF>();
+    AU.addRequired<LoopInfo>();
+    AU.setPreservesAll();
+}
+
 bool SGO::runOnModule(Module &M)
 {
     for(Module::iterator itr = M.begin(); itr != M.end(); itr++)
-        cerr << (itr->getName()).str() << endl;
-    SLF x;
-	return false;
+    {
+        if(itr->isDeclaration()) continue;
+        LoopInfo &LI = getAnalysis<LoopInfo>(*itr);
+        SLF &x = getAnalysis<SLF>(*itr);
+        //x.runOnFunction(*itr);
+        
+	}
+    return false;
 }
 
 char SGO::SGO::ID = 0;
