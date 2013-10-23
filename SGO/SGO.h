@@ -10,13 +10,12 @@ using namespace llvm;
 
 class SGO : public ModulePass{
 private:
-    SITGraph *GlobalDepenGraph;
+    //SITGraph *GlobalDepenGraph;
 public:
     static char ID;
     SGO();
     
     virtual bool runOnModule(Module &M);
     virtual void getAnalysisUsage(AnalysisUsage& AU) const;
-    
 };
 #endif

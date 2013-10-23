@@ -9,6 +9,8 @@
 #ifndef __Project__SITDotParser__
 #define __Project__SITDotParser__
 
+//Do not combine with SGO yet!!!!
+
 //SITDotParser means StreamIt Dot graph Parser
 #include <iostream>
 #include "DotParser.h"

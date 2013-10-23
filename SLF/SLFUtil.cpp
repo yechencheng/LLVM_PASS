@@ -9,6 +9,7 @@
 #include "SLFUtil.h"
 
 
+#include <list>
 
 using namespace llvm;
 
