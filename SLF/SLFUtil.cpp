@@ -84,7 +84,7 @@ bool CanBeOptimize(Function &F, LoopInfo &LI)
     int PushTime = GetInstCallTime(F, LI);
     if(PushTime == 0 || PushTime == 1) return false;
     if(PushTime > 1) return false;
-    Instruction *push, *peek = NULL, *pop = NULL;
+    Instruction *push = NULL, *peek = NULL, *pop = NULL;
     for(inst_iterator I = inst_begin(F), E = inst_end(F); I != E; I++)
     {
         if(IsCallFunc(&*I, PUSH)) push = &*I;

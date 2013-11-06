@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 
+#set(CMAKE_C_COMPILER clang-3.4)
+#set(CMAKE_CXX_COMPILER clang-3.4)
 find_package(LLVM)
 
 if(${LLVM_FOUND})
@@ -21,3 +23,4 @@ add_subdirectory(SLF)
 add_subdirectory(TempPass)
 add_subdirectory(SGO)
 add_subdirectory(LoopPass)
+add_subdirectory(OperatorDependence)
