@@ -14,6 +14,7 @@
 #include <map>
 #include <vector>
 #include <assert.h>
+#include <typeinfo>
 
 using namespace std;
 using namespace llvm;
